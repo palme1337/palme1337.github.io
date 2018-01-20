@@ -1,0 +1,67 @@
+.App {
+    /*background-image: url("../static/pics/pyramids.jpg");*/
+    background-size: 25em;
+    padding: 20px;
+    display: flex;
+    max-width: 65em;
+    flex-wrap: wrap;
+
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.App > h1 {
+    text-align: center;
+    flex-grow: 5;
+}
+
+/*Larger screens don't need to stack vertically*/
+@media (min-width: 60em) {
+    .App {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .App h1 {
+        flex-basis: 65em;
+    }
+}
+
+
+.player-card {
+    flex-grow: 0;
+    margin: .5em;
+    background-color: #236dc2;
+    border-radius: 3px;
+    padding: .5em;
+
+}
+
+.score-row {
+    display: flex;
+    align-items: baseline;
+    padding: .25em;
+    border: 1px solid black;
+    background-color: dimgrey;
+    color: white;
+}
+
+.score-row label {
+    flex-basis: 5em;
+    flex-grow: 1;
+    text-align: end;
+    margin-right: .5em;
+}
+
+.score-row input {
+    flex-basis: 10em;
+}
+
+.score-row.total {
+    background-color: black;
+    color: white;
+}
+.score-row.total label {
+    align-self: flex-end;
+}
